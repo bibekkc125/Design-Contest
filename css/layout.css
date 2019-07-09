@@ -21,7 +21,7 @@ header{
 .counter,.graphic-design,
 .examples,.testimonials,
 .logos,.coupon,.quick-links,
-.footer-container,.professional{
+.footer-container,.main-screen{
     margin: 0px auto;
     max-width: 73.125em;
     padding: 0px 15px;
@@ -102,26 +102,26 @@ header{
 .login-register ul li a,nav ul li a{
     color:black;
 }
-.professional{
+.main-screen{
     padding-top:60px;
     padding-bottom: 60px;
 }
-.professional>div{
+.main-screen>div{
     max-width:39.375em;
     margin:0px auto;
 }
 
-.professional img{
+.main-screen img{
     margin:0px auto;
     display:block;
 }
-.professional>div:first-child>div:nth-child(2)>img{
+.main-screen>div:first-child>div:nth-child(2)>img{
     width:8%;
 }
-.professional>div:first-child>div:nth-child(2){
+.main-screen>div:first-child>div:nth-child(2){
     margin-top:8px;
 }
-.professional>div:first-child>div:last-child{
+.main-screen>div:first-child>div:last-child{
     margin-top:14px;
     text-align:center;
     font-family: 'Exo', sans-serif;
@@ -131,13 +131,13 @@ header{
     line-height: 30px;
     
 }
-.professional button{
+.main-screen button{
     display:block;
     margin:0px auto;
-    border:none;
+    border:1px solid #F0423C;
     line-height: 4px;
     text-decoration:none;
-    padding: 15px 20px;
+    padding: 13px 18px;
     background-color: #F0423C;
     color:white;
     font-family: 'Lato', sans-serif; 
@@ -145,11 +145,15 @@ header{
     font-weight: bold;
     cursor:pointer;
 }
+.main-screen button:hover{
+    background-color: #EDEDED;
+    color:#F0423C;
+}
 
-.professional>div:last-child{
+.main-screen>div:last-child{
     margin-top: 50px;
 }
-.professional>div:last-child>div{
+.main-screen>div:last-child>div{
     text-align:center;
     margin-top: 16px;
     font-family: 'Lato', sans-serif; 
@@ -161,7 +165,7 @@ header{
 .red,.red i{
     color:#F0423C;
 }
-.professional>div:last-child>div>span:first-child{
+.main-screen>div:last-child>div>span:first-child{
     margin-right: 10px;
 }
 .what-do-you-need{
@@ -200,11 +204,18 @@ header{
 .photography>ul>li>a{
     display:block;
 }
+.photography>ul{
+    padding:3px;
+}
 .photography>ul>li>a>div{
     border: 1px solid #E5E5E5;
     padding-top: 24px;
     padding-bottom: 29px;
     width: 100%;
+}
+.photography>ul>li>a:hover{
+    box-shadow:0px 0px 5px grey;
+    transition:box-shadow 0.3s;
 }
 .photography>ul>li{
     width: 99%;
@@ -588,6 +599,9 @@ header{
     width: 90%;
     height:10px;
 }
+.email>form>input:first-child:focus{
+    background-color:white;
+}
 .email>form>input:last-child{
     margin-top:20px;
     padding: 0px 12px;
@@ -612,14 +626,14 @@ header{
 
 }
 
-.quick-links>div>i:first-child{
+.quick-links>div>a>i:first-child{
     float:right;
     padding:5px 6px;
     border:1px solid #f0423c;
     background-color:#f0423c;
     color:white;
 }
-.quick-links>div>i:first-child:hover{
+.quick-links>div>a>i:first-child:hover{
     color:#f0423c;
     background-color: #F7F7F7;
     cursor:pointer;
@@ -698,7 +712,7 @@ footer{
 .wrapperfooter{
     margin:15px 0px;
 }
-.footer-container>div>div{
+.wrapperfooter>span{
     color:#999999;
     float:left;
     line-height:10px;
@@ -737,32 +751,35 @@ footer{
     .social-media ul li a i:hover{
         color: #F0423C;
     }
-    .mail-call{
+    .mail-call-wrapper>ul>li{
         float:right;
-        line-height:21px;
     }
-    .mail-call ul li{
-        float:right;
-        margin-left:14.5px;
-        font-size: 12px;
-        line-height:11px;
-        font-family: 'Lato', sans-serif;
-        color:#888888;
+    .mail-call-wrapper>ul{
+        line-height: 12px;
     }
-    .mail-call ul li>div:first-child{
-        margin-left:10px;
-        line-height: 21px;
-        
+    .mail-call-wrapper>ul>li>a>div{
+        float:left;
     }
-    .mail-call ul li div img{
-        margin-right:7px;
-        display:block;
-    }
-    .mail-call ul li:first-child,.mail-call ul li:last-child{
-        padding: 3px  0px;
-        display: flex;
-        align-items:center;
+    .mail-call-wrapper>ul>li>a{
+        text-decoration:none;
+        font-family: "Lato", sans-serif;
+        font-size:14px;
+        color:#8A8A8A;  
+        vertical-align:middle;
 
+    }
+    .mail-call-wrapper>ul>li:nth-child(n+2){
+        margin-right:17px;
+    }
+    .phone-img::before{
+        content: url("../images/Call.png");
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .mail-img::before{
+        content: url("../images/Mail.png");
+        margin-right:10px;
+        vertical-align: middle;
     }
     .menu{
         display:none;
@@ -826,13 +843,7 @@ footer{
         display: block;
         font-size:13px;
     }
-    /* .dropdown{
-        display:none;
-    }
-    
-    .dropdown2{
-        display:none;
-    } */
+  
     .dropdown{
         border-top:2px solid #F0423C;
         display:none;
@@ -897,39 +908,39 @@ footer{
     .login-register ul li a,nav ul li a{
         color:black;
     }
-    .professional{
+    .main-screen{
         padding-top:141px;
         padding-bottom: 113px;
     }
-    .professional>div{
+    .main-screen>div{
         max-width:39.375em;
         margin:0px auto;
     }
-    .professional img{
+    .main-screen img{
         margin:0px auto;
     } 
-    .professional>div:first-child>div:nth-child(2){
+    .main-screen>div:first-child>div:nth-child(2){
         margin-top:13px;
     }
-    .professional>div:first-child>div:last-child{
+    .main-screen>div:first-child>div:last-child{
         margin-top:20px;
         font-size: 30px;
         line-height: 30px;
         
     }
-    .professional button{
+    .main-screen button{
         padding: 20px 40px;
         font-size:13px;
     }
-    .professional>div:last-child{
+    .main-screen>div:last-child{
         margin-top: 80px;
     }
-    .professional>div:last-child>div{
+    .main-screen>div:last-child>div{
         margin-top: 20px;
         font-size:12px;
         line-height: 10px;
     }
-    .professional>div:last-child>div>span:first-child{
+    .main-screen>div:last-child>div>span:first-child{
         margin-right: 10px;
     }
     .what-do-you-need{
@@ -1035,6 +1046,9 @@ footer{
     }
     .need-work>ul>li>div{
         float:left;
+    }
+    .need-work>ul>li>div>img{
+        width:70%;
     }
     .titletext>div:first-child{
         line-height:15px;
@@ -1274,17 +1288,12 @@ footer{
     
     }
     
-    .quick-links>div>i:first-child{
+    .quick-links>div>a>i:first-child{
         float:right;
-        padding:10px 13px;
+        padding:9px 11px;
         border:1px solid #f0423c;
         background-color:#f0423c;
         color:white;
-    }
-    .quick-links>div>i:first-child:hover{
-        color:#f0423c;
-        background-color: #F7F7F7;
-        cursor:pointer;
     }
     .enclose{
         margin-top:20px;
@@ -1417,7 +1426,7 @@ footer{
     .wrapperfooter{
         margin:18px 0px;
     }
-    .footer-container>div>div{
+    .wrapperfooter>span{
         color:#999999;
         float:left;
         line-height:14px;
@@ -1432,10 +1441,16 @@ footer{
         display:block;
         float:right;
         color:#999999;
+        margin-left:25px;
         line-height:14px;
         font-family:"Lato", sans-serif;
         font-size:11px;
-        margin-left:25px;
+        
+    }
+    .wrapperfooter>ul>li>a{
+        
+        color:#999999;
+        
     }
 }
 
@@ -1576,42 +1591,42 @@ footer{
         padding-bottom:20px;
     }
 
-    .professional{
+    .main-screen{
         padding-top:141px;
         padding-bottom: 113px;
     }
-    .professional>div{
+    .main-screen>div{
         max-width:39.375em;
         margin:0px auto;
     }
     
-    .professional img{
+    .main-screen img{
         margin:0px auto;
     }
-    .professional>div:first-child>div:nth-child(2){
+    .main-screen>div:first-child>div:nth-child(2){
         margin-top:16px;
     }
-    .professional>div:first-child>div:last-child{
+    .main-screen>div:first-child>div:last-child{
         margin-top:19px;
         font-size: 40px;
         line-height: 30px;
         
     }
-    .professional button{
+    .main-screen button{
         line-height: 10px;
         padding: 23px 50px;
         font-size:14px;
     }
     
-    .professional>div:last-child{
+    .main-screen>div:last-child{
         margin-top: 108px;
     }
-    .professional>div:last-child>div{
+    .main-screen>div:last-child>div{
         margin-top: 29px;
         font-size:14px;
         line-height: 11px;
     }
-    .professional>div:last-child>div>span:first-child{
+    .main-screen>div:last-child>div>span:first-child{
         margin-right: 10px;
     }
     .what-do-you-need{
@@ -1633,6 +1648,9 @@ footer{
         margin-top:30px;
         font-size:16px;
         line-height: 14px;
+    }
+    .need-work>ul>li>div>img{
+        width:100%;
     }
     .photography{
         margin-top: 57px;
@@ -1985,6 +2003,13 @@ footer{
     .quick-links>div>i:first-child{
         padding:10px 13px;
     }
+    .quick-links>div>a>i:first-child{
+        float:right;
+        padding:11px 12px;
+        border:1px solid #f0423c;
+        background-color:#f0423c;
+        color:white;
+    }
     .enclose{
         margin-top:20px;
     }
@@ -2072,6 +2097,7 @@ footer{
     }
     .wrapperright>form>input:nth-child(-n+2):focus{
         background-color:white;
+
     }
     .wrapperright>form>input:last-child{
         margin-top: 2px;
@@ -2111,7 +2137,7 @@ footer{
         font-size:12px;
         margin-left:25px;
     }
-    .professional>div:first-child>div:nth-child(2)>img{
+    .main-screen>div:first-child>div:nth-child(2)>img{
         width:auto;
     }
     .need-design>div:nth-child(2)>img{
