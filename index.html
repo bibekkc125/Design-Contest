@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo&display=swap" rel="stylesheet">
@@ -13,419 +13,419 @@
 </head>
 <body>
 
+    <div class="transBlack"></div>
+    <div class="login-form">
+        <div class="login-header"><span>LOGIN FORM</span> <span class="close" onclick="loginToggle()"><i class="fas fa-times fa-xs"></i></span></div>
+
+        <form>
+            <div class="login-fields">
+                <input type="text" placeholder="Email Address">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="login-fields">
+                <input type="text" placeholder="Password ">
+                <i class="fas fa-lock"></i>
+            </div>
+
+            <span><input type="checkbox"><span> Remember Me</span></span>
+            <span><a href="#">Forgot Password <i class="fas fa-question-circle"></i></a></span>
+            <input type="button" value="LOGIN">
+        </form>
+
+        <div class="login-footer clearfix">
+            <span><a href="#">Not a Member Yet?</a></span>
+            <span onclick="registerToggle()"><a href="#">Sign Up</a></span>
+        </div>
+        
+    </div>  
+
+
+    <div class="register-form">
+        <div class="register-header">
+            <span>REGISTRATION FORM</span> 
+            <span class="close" onclick="registerToggle()"><i class="fas fa-times fa-xs"></i></span>
+            <div>Already Have an Account? <span class="login" onclick="loginToggle()">Log In</span></div>
+        </div>
+
+        <form>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder ="User Name">
+            <input type="password" placeholder="Password ">
+            <input type="password" placeholder ="Confirm Password">
+            <input type="text" placeholder="Mobile Number">
+            <span><input type="checkbox">I Need Something Designed</span>
+            <span><input type="checkbox">I'm a Designer</span>
+
+            <input type="button" value="CREATE AN ACCOUNT">
+        </form>      
+    </div>
+    
+    
+    <ul class="side-navbar">
+        <li><a href="#" onclick="toggleMenu()"><i class="fas fa-times fa-s"></i></a></li>
+        <li><a href="#" onclick="loginToggle()">LOGIN</a></li>
+        <li><a href="#" onclick="registerToggle()">REGISTER</a></li>
+        <li><a href="#">BROWSE CATAGORIES</a></li>
+        <li><a href="#">HOW IT WORKS</a></li>
+        <li><a href="#">BROWSE CONTEST</a></li>
+        <li><a href="#">PRICING PLAN</a></li>
+    </ul>
+
+
     <header>
         <div class="header-container clearfix">
-            <div class = "social-media">
-                <ul>
-                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-s"></i></a></li>
-                    <li><a href="https://twitter.com/"><i class="fab fa-twitter fa-s"></i></a></li>
-                    <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p fa-s"></i></a></li>
-                    <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in fa-s"></i></a></li>
-                    <li><a href="https://www.tumblr.com/"><i class="fab fa-tumblr fa-s"></i></a></li>
-                </ul>
-            </div>
-            <div class = "mail-call-wrapper">
-                <ul>
-                    <li>
-                        <a href="tel:0800 123456 78900">
-                            
-                            <span class="phone-img">0800 123456 78900</span>
-                        </a>
-                        
-                    </li>
-                    <li><img src="images/Line.png" alt="Line"></li>
-                    <li>
-                        <a href="mailto:info@company.com">
-                            <span class="mail-img">info@company.com</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul class = "social-media">
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-s"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter fa-s"></i></a></li>
+                <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p fa-s"></i></a></li>
+                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in fa-s"></i></a></li>
+                <li><a href="https://www.tumblr.com/"><i class="fab fa-tumblr fa-s"></i></a></li>
+            </ul>
+            <ul class = "mail-call-wrapper">
+                <li>
+                    <a href="tel:0800-123456-78900">
+                        <span><i class="fas fa-phone-alt"></i></span>
+                        <span class="phone-img">0800 123456 78900</span>
+                    </a>
+                    
+                </li>
+                <li><img src="images/Line.png" alt="Line"></li>
+                <li>
+                    <a href="mailto:info@company.com">
+                        <span><i class="far fa-envelope"></i></span>
+                        <span class="mail-img">info@company.com</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
     <div class="main">
         <div class = "main-banner">
-            <div class = "design-contest clearfix">
+            <div class = "main-banner-title clearfix">
                 <div class = "logo-wrapper">
                     <a href="#">
-                        <div><img src="images/mainlogo.png" alt="Logo"></div>
+                        <img src="images/mainlogo.png" alt="Logo">
                         <div>DES<span>IGN</span> CON<span>TEST</span></div>
                     </a>
-                </div>
-                <div class ="navigation-wrapper">
-                    <div class="login-register">
-                        <ul>
-                            <li><a href="#">
-                                <div><span><img src="images/register.png" alt="register"></span><span>REGISTER</span></div></a></li>
-                            <li><a href="#"><div><span><img src="images/login.png" alt="login"></span><span>LOGIN</span></div></a></li>
-                        </ul>
-                    </div>
-                    <nav>
-                        <ul>
+                </div>  
+                <ul class="navigation-right">
+                    <li>
+                        <a href="#" onclick="loginToggle()">
+                            <span>
+                                <i class="fas fa-key fa-xs"></i>
+                            </span>
+                            <span>LOGIN</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="registerToggle()">
+                            <span>
+                                <i class="fas fa-user fa-xs"></i>
+                            </span>
+                            <span>REGISTER</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navigation-left">
+                    <li>
+                        <a href="#" onclick="toggleDropdown1()">
+                            <span>BROWSE CATAGORIES</span>
+                            <span><i class="fas fa-caret-down"></i></span>
+                        </a>
+                        <ul class="navigation-left-dropdown">
+                            <li><a href="#"><span>LOGO & IDENTITY</span><span><i class="fas fa-caret-right"></i></span></a></li>
+                            <li><a href="#"><span>PACKAGING & LABEL</span><span><i class="fas fa-caret-right"></i></span></a></li>
                             <li>
-                                <a href="#">
-                                    <div class="browse">
-                                        <span>BROWSE CATAGORIES</span>
-                                        <span><i class="fas fa-caret-down"></i></span>
-                                    </div>
+                                <a href="#" onclick ="toggleDropdown2()">
+                                        <span>WEB & APP DESIGN</span>
+                                        <span><i class="fas fa-caret-right"></i></span>
                                 </a>
-                                <div class="dropdown">
-                                    <ul>
-                                        <li><a href="#"><div><span>LOGO & IDENTITY</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li><a href="#"><div><span>PACKAGING & LABEL</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="browse2">
-                                                    <span>WEB & APP DESIGN</span>
-                                                    <span><i class="fas fa-caret-right"></i></span>
-                                                </div>
-                                            </a>
-                                            <div class="dropdown2">
-                                                <ul>
-                                                    <li><a href="#">APP DESIGN</a></li>
-                                                    <li><a href="#">LANDING PAGE DESIGN</a></li>
-                                                    <li><a href="#">FACEBOOK COVER</a></li>
-                                                    <li><a href="#">WEBPAGE DESIGN</a></li>
-                                                    <li><a href="#">ICON & BUTTON</a></li>
-                                                    <li><a href="#">SOCIAL MEDIA PAGE</a></li>
-                                                    <li><a href="#">FLASH BANNER</a></li>
-                                                    <li><a href="#">BANNER AD</a></li>
-                                                    <li><a href="#">OTHER DESIGN</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="#"><div><span>ART & ILLUSTRATION</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li><a href="#"><div><span>BOOK & MAGAZINE</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li><a href="#"><div><span>ADVERTISING</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li><a href="#"><div><span>SMALL DESIGN TASK</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li><a href="#"><div><span>CLOTHING DESIGNS</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                        <li><a href="#"><div><span>ALL DESIGNS</span><span><i class="fas fa-caret-right"></i></span></div></a></li>
-                                    </ul>
-                                </div>
-                            </li>   
-                            <li><a href="#">HOW IT WORKS</a></li>
-                            <li><a href="#">BROWSE CONTEST</a></li>
-                            <li><a href="#">PRICING PLAN</a></li>
+
+                                <ul  class="navigation-left-dropdown2">
+                                    <li><a href="#">APP DESIGN</a></li>
+                                    <li><a href="#">LANDING PAGE DESIGN</a></li>
+                                    <li><a href="#">FACEBOOK COVER</a></li>
+                                    <li><a href="#">WEBPAGE DESIGN</a></li>
+                                    <li><a href="#">ICON & BUTTON</a></li>
+                                    <li><a href="#">SOCIAL MEDIA PAGE</a></li>
+                                    <li><a href="#">FLASH BANNER</a></li>
+                                    <li><a href="#">BANNER AD</a></li>
+                                    <li><a href="#">OTHER DESIGN</a></li>
+                                </ul>
+  
+                            </li>
+                            <li><a href="#"><span>ART & ILLUSTRATION</span><span><i class="fas fa-caret-right"></i></span></a></li>
+                            <li><a href="#"><span>BOOK & MAGAZINE</span><span><i class="fas fa-caret-right"></i></span></a></li>
+                            <li><a href="#"><span>ADVERTISING</span><span><i class="fas fa-caret-right"></i></span></a></li>
+                            <li><a href="#"><span>SMALL DESIGN TASK</span><span><i class="fas fa-caret-right"></i></span></a></li>
+                            <li><a href="#"><span>CLOTHING DESIGNS</span><span><i class="fas fa-caret-right"></i></span></a></li>
+                            <li><a href="#"><span>ALL DESIGNS</span><span><i class="fas fa-caret-right"></i></span></a></li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="menu">
-                        <button type = "button" onclick="myfunction()">MENU</button>
-                        <ul class="elements">
-                            <li><a href="#"><span><img src="images/login.png" alt="login"></span><span>LOGIN</span></a></li>
-                            <li><a href="#"><span><img src="images/register.png" alt="register"></span><span>REGISTER</span></a></li>
-                            <li><a href="#">BROWSE CATAGORIES</a></li>
-                            <li><a href="#">HOW IT WORKS</a></li>
-                            <li><a href="#">BROWSE CONTEST</a></li>
-                            <li><a href="#">PRICING PLAN</a></li>
-                        </ul>
-                    </div>
+                    </li>   
+                    <li><a href="#">HOW IT WORKS</a></li>
+                    <li><a href="#">BROWSE CONTEST</a></li>
+                    <li><a href="#">PRICING PLAN</a></li>
+                </ul> 
+
+                <span class="hamburger-menu"><i onclick="toggleMenu()" class="fas fa-bars"></i></span>
+
             </div>
             <div class="main-screen">
+                <div><img src="images/logo.png" alt="logo"></div>
+                <h1>PROFESSIONAL GRAPHIC DESIGNS</h1>
+                <button type="button">GET STARTED NOW</button>
                 <div>
-                    <div><img src="images/logo.png" alt="logo"></div>
-                    <div><img src="images/rectangle.png" alt="line"></div>
-                    <div>PROFESSIONAL GRAPHIC DESIGNS</div>
-                </div>
-                <div>
-                    <button type="button">GET STARTED NOW</button>
-                    <div><span class="red"><i class="far fa-check-square"></i></span><span class="red">100% </span><span>MONEY BACK GUARANTEE</span></div>
+                    <span class="red">
+                        <i class="far fa-check-square"></i> 100% 
+                    </span>
+                    <span> MONEY BACK GUARANTEE</span>
                 </div>
             </div>
         </div>
     </div>
     
     <div>
-        <div class="what-do-you-need">
+        <div class="section1-wrapper">
 
-            <div class="need-design">
-                <div>WHAT DO YOU NEED DESIGN</div>
-                <div><img src="images/rectangle.png" alt="line"></div>
-                <div>How does one design and develop for the responsive web? A lot of methodologies</div>
-            </div>
+                <h2>WHAT DO YOU NEED DESIGN</h2>
+                <p>How does one design and develop for the responsive web? A lot of methodologies</p>
 
-            <div class= "photography">
-                <ul>
+                <ul class= "section1-items clearfix">
                     <li>
                         <a href="#">
-                            <div>
                                 <img src="images/logodesign.png" alt="logodesign">
                                 <img src="images/grayline.png" alt="line">
-                                <div>LOGO DESIGN</div>
-                            </div>
+                                <span>LOGO DESIGN</span>
+
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div>
                                 <img src="images/photography.png" alt="photography">
                                 <img src="images/grayline.png" alt="line">
-                                <div>PHOTOGRAPHY</div>
-                            </div>
+                                <span>PHOTOGRAPHY</span>
+
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div>
                                 <img src="images/branding.png" alt="branding">
                                 <img src="images/grayline.png" alt="line">
-                                <div>BRANDING</div>
-                            </div>
+                                <span>BRANDING</span>
+
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div>
                                 <img src="images/websitedesign.png" alt="websitedesign">
                                 <img src="images/grayline.png" alt="line">
-                                <div>WEBSITE DESIGN</div>
-                            </div>
+                                <span>WEBSITE DESIGN</span>
+
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div>
                                 <img src="images/tshirtdesign.png" alt="tshirtdesign">
                                 <img src="images/grayline.png" alt="line">
-                                <div>T-SHIRT DESIGN</div>
-                            </div>
+                                <span>T-SHIRT DESIGN</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div>
                                 <img src="images/packagingdesign.png" alt="packagingdesign">
                                 <img src="images/grayline.png" alt="line">
-                                <div>PACKAGING DESIGN</div>
-                            </div>
+                                <span>PACKAGING DESIGN</span>
                         </a>
                     </li>                    
                 </ul>
-            </div>
+
             <button type="button">VIEW ALL CATAGORIES</button>
         </div>
     </div>
 
-    <div class = "black">
-        <div class="counter">
-            <ul>
-                <li>
-                    <div>313</div>
-                    <div><img src="images/rectangle.png" alt="line"></div>
-                    <div>NEW CONTEST TODAY</div>
-                </li>
-                <li>
-                    <div>5171</div>
-                    <div><img src="images/rectangle.png" alt="line"></div>
-                    <div>OPEN CONTEST</div>
-                </li>
-                <li>
-                    <div>33612</div>
-                    <div><img src="images/rectangle.png" alt="line"></div>
-                    <div>CONTEST TO DATE</div>
-                </li>
-                <li>
-                    <div>$8515</div>
-                    <div><img src="images/rectangle.png" alt="line"></div>
-                    <div>PAYOUT LAST MONTH</div>
-                </li>
-            </ul>
-
-        </div>
+    <div class = "section2">
+        <ul class="section2-items clearfix">
+            <li>
+                <div>313</div>
+                <div>NEW CONTEST TODAY</div>
+            </li>
+            <li>
+                <div>5171</div>
+                <div>OPEN CONTEST</div>
+            </li>
+            <li>
+                <div>33612</div>
+                <div>CONTEST TO DATE</div>
+            </li>
+            <li>
+                <div>$8515</div>
+                <div>PAYOUT LAST MONTH</div>
+            </li>
+        </ul>
     </div>
     <div>
-        <div class="graphic-design">
-            <div class="made-easy">
-                <div>GRAPHIC DESIGN MADE EASY</div>
-                <div><img src="images/rectangle.png" alt="line"></div>
-                <div>How does one design and develop for the responsive web? A lot of methodologies.</div>
-            </div>
-            <div class="outerbox clearfix">
-                <div class="need-work">
-                    <div class="uppertext">
-                        <div>NEED WORK DONE?</div>
-                        <div>Post your project and recieve competitive bids from 
-                            freelancers within minutes. Our reputation system will
-                            make it easy.
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <div><img src="images/cup.png" alt="cup"></div>
-                            <div class ="titletext">
-                                <div>PICK YOUR FAVORITE</div>
-                                <div>Fill in our design brief and choose how
-                                    much you'll pay.
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div><img src="images/pc.png" alt="pc"></div>
-                            <div class ="titletext">
-                                <div>GET DOZENS OF DESIGNS</div>
-                                <div>Fill in our design brief and choose how
-                                    much you'll pay.
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div><img src="images/note.png" alt="note"></div>
-                            <div class ="titletext">
-                                <div>TELL US WHAT YOU NEED</div>
-                                <div>Fill in our design brief and choose how
-                                    much you'll pay.
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="video">
-                    <img src="images/laptop.png" alt="laptop">
-                    <img src="images/play.png" alt="play">
-                </div>
-            </div>
-        </div>  
-    </div>
+        <div class="section3-wrapper">
+            <h2>GRAPHIC DESIGN MADE EASY</h2>
+            <p>How does one design and develop for the responsive web? A lot of methodologies.</p>
 
-    <div class="gray">
-        <div class="examples">
-            <div class = "of-graphics clearfix">
-                <div>EXAMPLES OF GRAPHIC DESIGNS</div>
-                <div>
-                    <i class="fas fa-chevron-left"></i>
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-            <div class="images">
+            <div class="left-content">
+
+                    <h3>NEED WORK DONE?</h3>
+                    <p>Post your project and recieve competitive bids from 
+                        freelancers within minutes. Our reputation system will
+                        make it easy.
+                    </p>
+
                 <ul>
                     <li>
-                        <a href="#">
-                            <div class="anim">
-                                <img src="images/example1.png" alt="photo">
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </a>
+                        <img src="images/cup.png" alt="cup">
+                        <div class ="left-sub-content">
+                            <h4>PICK YOUR FAVORITE</h4>
+                            <p>Fill in our design brief and choose how
+                                much you'll pay.
+                            </p>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example2.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        <img src="images/pc.png" alt="pc">
+                        <div class ="left-sub-content">
+                            <h4>GET DOZENS OF DESIGNS</h4>
+                            <p>Fill in our design brief and choose how
+                                much you'll pay.
+                            </p>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example3.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example4.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example5.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example6.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example7.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="anim">
-                                <div><img src="images/example8.png" alt="photo"></div>
-                                <div class="transblack"></div>
-                                <div class="transition">
-                                    <div><i class="fas fa-anchor fa-lg"></i></div>
-                                    <div>
-                                        <span>$1259.00</span>
-                                        <span>45 DESIGNS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        <img src="images/note.png" alt="note">
+                        <div class ="left-sub-content">
+                            <h4>TELL US WHAT YOU NEED</h4>
+                            <p>Fill in our design brief and choose how
+                                much you'll pay.
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </div>
-           
+
+            <iframe  src="https://www.youtube.com/embed/O5TdnuUhIgs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </div>  
+    </div>
+
+    <div class="section4">
+        <div class="section4-wrapper">
+
+            <h2>EXAMPLES OF GRAPHIC DESIGNS</h2>
+            <div class="button-wrapper">
+                <span><i class="fas fa-chevron-left"></i></span>
+                <span><i class="fas fa-chevron-right"></i></span>
+            </div>
+
+            <ul class="image-container clearfix">
+                <li>
+                    <a href="#">
+                        <img src="images/example1.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example2.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example3.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example4.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example5.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example6.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example7.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/example8.png" alt="photo">
+                        <div class="overlay">
+                            <i class="fas fa-anchor fa-lg"></i>
+                            <div>
+                                <span>$1259.00</span>
+                                <span>45 DESIGNS</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+        
+            </ul>
+
             <div class="shufflebutton">
-                <i class="fas fa-chevron-left"></i>
-                <i class="fas fa-chevron-right"></i>
+                <a href="#"><i class="fas fa-chevron-left"></i></a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
             </div>
             
             <button type="button">BROWSE ALL CONTEST</button>
@@ -433,233 +433,228 @@
     </div>
 
     <div>
-        <div class="testimonials">
-            <div class="testhead">
-                <div>OUR TESTIMONIALS</div>
-                <div><img src="images/rectangle.png" alt="line"></div>
-                <div>How does one design and develop for the responsive web? A lot of methodologies.</div>
-            </div>
-            <div class="comments">
-                <ul>
-                    <li>
-                        <div class= "container">
-                            <div class = "cmt">
-                                “We appreciate the professionalism of designs 
-                                contest the Customer Service too. We have worked 
-                                with you guys for about 8 years and looks like we 
-                                should get another 8 in! :)”
-                            </div>
-                            <div class="rating">
-                                <span>3 star rating</span>
-                                <span>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                </span>
-                            </div>
+        <div class="section5-wrapper">
+            
+            <h2>OUR TESTIMONIALS</h2>
+            <p>How does one design and develop for the responsive web? A lot of methodologies.</p>
+
+            <ul class="section5-reviews">
+                <li>
+                    <div class= "container">
+                        <p class = "review">
+                            “We appreciate the professionalism of designs 
+                            contest the Customer Service too. We have worked 
+                            with you guys for about 8 years and looks like we 
+                            should get another 8 in! :)”
+                        </p>
+                        <div class="rating">
+                            <span>3 star rating</span>
+                            <span>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                            </span>
                         </div>
-                        <div class="name">JHONE ANGILIYA DOE</div>
-                    </li>
-                    <li>
-                            <div class= "container">
-                                <div class = "cmt">
-                                        “Design contest is a truly amazing services 
-                                        with  reasonable prices and, believe it or 
-                                        not, a really enjoyable platform for the 
-                                        design.impressive responses from designers,
-                                </div>
-                                <div class="rating">
-                                    <span>5 star rating</span>
-                                    <span>
-                                            <i class="fas fa-star fa-xs"></i>
-                                            <i class="fas fa-star fa-xs"></i>
-                                            <i class="fas fa-star fa-xs"></i>
-                                            <i class="fas fa-star fa-xs"></i>
-                                            <i class="fas fa-star fa-xs"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="name">ETALON DIAGNOSTICS</div>
-                        </li>
-                </ul>
+                    </div>
+                    <span class="reviewer">JHONE ANGILIYA DOE</span>
+                </li>
+                <li>
+                    <div class= "container">
+                        <p class = "review">
+                                “Design contest is a truly amazing services 
+                                with  reasonable prices and, believe it or 
+                                not, a really enjoyable platform for the 
+                                design.impressive responses from designers,
+                        </p>
+                        <div class="rating">
+                            <span>5 star rating</span>
+                            <span>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                                    <i class="fas fa-star fa-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="reviewer">ETALON DIAGNOSTICS</span>
+                </li>
+            </ul>
+            <div class="shufflebutton section5-shufflebutton">
+                <a href="#"><i class="fas fa-chevron-left"></i></a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
             </div>
-            <div class="leftright">
-                <i class="fas fa-chevron-left"></i>
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
+        </div>  
     </div>
 
-    <div class="logoscontainer">
-        <div class="logos">
-            <ul>
-                <li><img src="images/photograph.png" alt="photography"></li>
-                <li><img src="images/trendinglogos.png" alt="trendinglogos"></li>
-                <li><img src="images/summer.png" alt="summer"></li>
-                <li><img src="images/nature.png" alt="nature"></li>
-                <li><img src="images/vintage.png" alt="vintage"></li>
+    <div class="section6">
+        <div class="section6-wrapper">
+            <ul class="clearfix">
+                <li><a href="#"><img src="images/photograph.png" alt="photography"></a></li>
+                <li><a href="#"><img src="images/trendinglogos.png" alt="trendinglogos"></a></li>
+                <li><a href="#"><img src="images/summer.png" alt="summer"></a></li>
+                <li><a href="#"><img src="images/nature.png" alt="nature"></a></li>
+                <li><a href="#"><img src="images/vintage.png" alt="vintage"></a></li>
 
             </ul>
         </div>
     </div>
     <div>
-        <div class="coupon">
-            <div class="wrapper">
-                <div class="get">
-                    <div>GET THE <span>$10</span> COUPON</div>
-                    <div>SIGN IN TO EMAIL & RECIEVE THE $10 COUPON</div>
-                </div>
-                <div class="email">
-                    <form>
-                        <input type="text" placeholder="Enter Here Your Email Address">
-                        <input type="button" value="EMAIL ME">
-                    </form>
-                </div>
+        <div class="section7-wrapper clearfix">
+            <div class="section7-left">
+                <h4>GET THE <span>$10</span> COUPON</h4>
+                <span>SIGN IN TO EMAIL & RECIEVE THE $10 COUPON</span>
+            </div>
+            <div class="section7-right">
+                <form>
+                    <input type="text" placeholder="Enter Here Your Email Address">
+                    <input type="button" value="EMAIL ME">
+                </form>
             </div>
         </div>
     </div>
-    <div class="last clearfix">
-        <div class="quick-links">
+    <div class="section8">
+        <div class="section8-wrapper clearfix">
             <div class="clearfix"><a href="#"><i class="fas fa-chevron-up"></i></a></div>
-            <div class="enclose">
-                <div class="wrapperleft">
-                    <div class="bottomheading clearfix">
-                        <div><img src="images/bottomlogo.png" alt="logo"></div>
-                        <div>DES<span>IGN</span> CON<span>TEST</span></div>
-                    </div>
+    
+            <div class="section8-left">
+                <img src="images/bottomlogo.png" alt="logo">
+                <div>DES<span>IGN</span> CON<span>TEST</span></div>
 
-                    <div class="lorem">
-                            This is Photoshop's version  of have  Lorem Ipsum. haiiProin 
-                            gravida nibh vel velit auctor aliquet. Aenean sollicitubedin, 
-                            lorem noi quis auris egestas quam, ut aliquam massa snsaisl 
-                            quis neque. Suspen is a blended opti ons dis how now itna a
-                            s version  of have  Lorem Ipsum. iiProin gravida nibh v velit 
-                            have a lorem ipsum grgood ideas eat .Aenean sollicitubedin, 
-                            lorem noi quis auris egestas quam zoomer
-                    </div>
-                    <div class="logobottom">
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-pinterest-p"></i>
-                            <i class="fab fa-linkedin-in"></i>
-                            <i class="fab fa-google-plus-g"></i>
-                    </div>
+                <p>
+                    This is Photoshop's version  of have  Lorem Ipsum. haiiProin 
+                    gravida nibh vel velit auctor aliquet. Aenean sollicitubedin, 
+                    lorem noi quis auris egestas quam, ut aliquam massa snsaisl 
+                    quis neque. Suspen is a blended opti ons dis how now itna a
+                    s version  of have  Lorem Ipsum. iiProin gravida nibh v velit 
+                    have a lorem ipsum grgood ideas eat .Aenean sollicitubedin, 
+                    lorem noi quis auris egestas quam zoomer
+                </p>
+
+                <ul class="section8-left-links clearfix">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+
+            </div>
+            
+            <div class="section8-mid">
+                <div class="section8-mid-links">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-caret-right fa-xs"></i>
+                                <span>About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-caret-right fa-xs"></i>
+                                <span>Delivery Information</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-caret-right fa-xs"></i>
+                                <span>Terms and Conditions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-caret-right fa-xs"></i>
+                                <span>Privacy Policy</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-caret-right fa-xs"></i>
+                                <span>Contest</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-caret-right fa-xs"></i>
+                                <span>Contact Us</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="wrappermiddle">
-                    <div class="links">
-                        <div>QUICK LINKS</div>
-                        <div><img src="images/bottomline.png" alt="line"></div>
+
+                <div class="section8-mid-links">
+                        <h3>MYACCOUNT</h3>
                         <ul>
                             <li>
                                 <a href="#">
                                     <i class="fas fa-caret-right fa-xs"></i>
-                                    <div>About Us</div>
+                                    <span>My Account</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="fas fa-caret-right fa-xs"></i>
-                                    <div>Delivery Information</div>
+                                    <span>Login</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="fas fa-caret-right fa-xs"></i>
-                                    <div>Terms and Conditions</div>
+                                    <span>Terms and Conditions</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="fas fa-caret-right fa-xs"></i>
-                                    <div>Privacy Policy</div>
+                                    <span>My Cart</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="fas fa-caret-right fa-xs"></i>
-                                    <div>Contest</div>
+                                    <span>Wishlist</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="fas fa-caret-right fa-xs"></i>
-                                    <div>Contact Us</div>
+                                    <span>Checkout</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="links">
-                            <div>MYACCOUNT</div>
-                            <div><img src="images/bottomline.png" alt="line"></div>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-caret-right fa-xs"></i>
-                                        <div>My Account</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-caret-right fa-xs"></i>
-                                        <div>Login</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-caret-right fa-xs"></i>
-                                        <div>Terms and Conditions</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-caret-right fa-xs"></i>
-                                        <div>My Cart</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-caret-right fa-xs"></i>
-                                        <div>Wishlist</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-caret-right fa-xs"></i>
-                                        <div>Checkout</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                 </div>
-                <div class="wrapperright">
-                    <div>NEWSLETTER</div>
-                    <div><img src="images/bottomline.png" alt="line"></div>
-                    <div>Sed ut perspiciat have a now is unde omnis iste natus 
-                        error sit lorem ipsum dolar set ament voluptatem.</div>
+                <div class="section8-right">
+                    <h3>NEWSLETTER</h3>
+                    <p>Sed ut perspiciat have a now is unde omnis iste natus 
+                        error sit lorem ipsum dolar set ament voluptatem.
+                    </p>
                     <form>
                         <input type="text" placeholder="Name">
                         <input type="text" placeholder="Email">
                         <input type="button" value="SIGNUP">
                     </form>
                 </div>
-            </div>
+
         </div>
     </div>
     <footer>
         <div class="footer-container clearfix">
             <div class="wrapperfooter clearfix">
-                <span>&copy; 2015 | All Rights Reserved</span>
+                
                 <ul>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Contest</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
                     <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contest</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Register</a></li>
                 </ul>
+                <span>&copy; 2015 | All Rights Reserved</span>
             </div>
         </div>
     </footer>
