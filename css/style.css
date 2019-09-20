@@ -1926,7 +1926,7 @@ footer{
         font-size: 16px;  
     }
     .left-content{
-        display: inline-block;
+        float: left;
     }
     .left-content>ul{
         margin-top: 14px;
